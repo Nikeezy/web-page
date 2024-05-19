@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper-button-next, .swiper-button-prev {
+    position: static !important;
+    top: 0 !important;
+    margin-top: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+:root {
+    --swiper-theme-color: #212529;
+    --swiper-navigation-size: 3 rem;
+    color: #212529;
+}

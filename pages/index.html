@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web-task</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/output.css" />
+  </head>
+  <body class="bg-gray-100">
+    <div
+      class="max-w-[1160px] mx-auto flex flex-col justify-center items-center h-screen"
+    >
+      <div
+        class="flex flex-col justify-center items-center space-y-8 mx-2 md:mx-4 lg:mx-8 w-full h-full"
+      >
+        <div class="flex flex-col space-y-8 w-full">
+          <div class="flex items-center justify-between w-full">
+            <div
+              class="font-medium text-3xl leading-8 sm:text-5xl sm:leading-[55px]"
+            >
+              Клиенты о нас
+            </div>
+            <div class="flex items-center space-x-2 md:space-x-4">
+              <div>
+                <button
+                  data-modal-target="crud-modal"
+                  data-modal-toggle="crud-modal"
+                  class="hidden items-center bg-[#212529] text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center sm:flex"
+                  type="button"
+                >
+                  Оставить отзыв
+                </button>
+
+                <div
+                  id="crud-modal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                  class="hidden overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                >
+                  <div class="relative p-4 w-full max-w-md max-h-full">
+                    <div class="relative bg-white rounded-lg shadow">
+                      <div
+                        class="flex items-center justify-between p-4 md:p-5 border-b rounded-t"
+                      >
+                        <h3 class="text-2xl font-medium text-[#212529]">
+                          Написание отзыва
+                        </h3>
+                        <button
+                          type="button"
+                          class="text-[#212529] bg-transparent hover:bg-[#212529] hover:text-white rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+                          data-modal-toggle="crud-modal"
+                        >
+                          <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 14 14"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                            />
+                          </svg>
+                          <span class="sr-only">Close modal</span>
+                        </button>
+                      </div>
+                      <form id="review-form" class="p-4 md:p-5">
+                        <div class="grid gap-4 mb-4 grid-cols-2">
+                          <div class="col-span-2">
+                            <label
+                              for="fullname"
+                              class="block mb-2 text-base font-medium text-[#212529]"
+                              >ФИО</label
+                            >
+                            <input
+                              type="text"
+                              name="fullname"
+                              id="fullname"
+                              class="text-[#212529] text-base rounded-lg focus:border-[#212529] block w-full p-2.5"
+                              placeholder="Введите Ваше ФИО"
+                              required
+                            />
+                          </div>
+                          <div class="col-span-2">
+                            <label
+                              for="socials"
+                              class="block mb-2 text-base font-medium text-[#212529]"
+                              >Ваш ВКонтакте</label
+                            >
+                            <input
+                              type="text"
+                              name="socials"
+                              id="socials"
+                              class="text-[#212529] text-base rounded-lg focus:border-[#212529] block w-full p-2.5"
+                              placeholder="Ссылка на Ваш профиль во ВКонтакте"
+                            />
+                          </div>
+                          <div class="col-span-2">
+                            <label
+                              for="description"
+                              class="block mb-2 text-base font-medium text-[#212529]"
+                              >Ваш отзыв</label
+                            >
+                            <textarea
+                              id="description"
+                              rows="4"
+                              class="text-[#212529] text-base rounded-lg focus:border-[#212529] block w-full p-2.5"
+                              placeholder="Напишите здесь Ваш отзыв"
+                              required
+                            ></textarea>
+                          </div>
+                          <div class="col-span-2">
+                            <label
+                              for="photo"
+                              class="block mb-2 text-base font-medium text-[#212529]"
+                              >Фото</label
+                            >
+                            <input
+                              type="file"
+                              name="photo"
+                              id="photo"
+                              accept="image/png, image/jpeg"
+                            />
+                          </div>
+                        </div>
+                        <button
+                          type="submit"
+                          class="text-white inline-flex items-center bg-[#212529] font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                        >
+                          <svg
+                            class="me-1 -ms-1 w-5 h-5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </svg>
+                          Оставить отзыв
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-2 md:space-x-4">
+                <div
+                  class="swiper-button-prev max-w-4 max-h-3 p-4 sm:max-h-full sm:max-w-full border-solid border-2 border-black rounded-full sm:p-5"
+                ></div>
+                <div
+                  class="swiper-button-next max-w-4 max-h-3 p-4 sm:max-h-full sm:max-w-full border-solid border-2 border-black rounded-full sm:p-5"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-end">
+            <button
+              data-modal-target="crud-modal"
+              data-modal-toggle="crud-modal"
+              class="flex items-center bg-[#212529] text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center sm:hidden"
+              type="button"
+            >
+              Оставить отзыв
+            </button>
+          </div>
+        </div>
+        <div class="overflow-hidden w-full h-full">
+          <div id="reviews-container" class="swiper-container w-full h-full">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-3xl p-8 flex flex-col space-y-12 justify-between leading-normal"
+                >
+                  <div class="flex flex-col space-y-4">
+                    <p
+                      class="text-xs sm:text-base text-[#ADB5BD] flex items-center"
+                    >
+                      06.03.2023
+                    </p>
+                    <p class="text-sm sm:text-lg">
+                      Внезапно, представители современных социальных резервов
+                      лишь добавляют фракционных разногласий и подвергнуты целой
+                      серии независимых исследований. Но социально-экономическое
+                      развитие предоставляет широкие возможности для
+                      соответствующих условий активизации.
+                    </p>
+                  </div>
+                  <div class="flex items-center">
+                    <img
+                      class="w-10 h-10 rounded-full mr-4"
+                      src="/assets/user1.png"
+                      alt="Avatar of Writer"
+                    />
+                    <div class="text-sm">
+                      <p class="font-medium sm:text-lg leading-none">
+                        Юлия Богачева
+                      </p>
+                      <a href="https://vk.com/" class="text-gray-600 underline"
+                        >ВКонтакте</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="relative w-full h-[500px] shadow-lg overflow-hidden"
+                >
+                  <video
+                    class="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-3xl"
+                    controls
+                  >
+                    <source src="/assets/video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div class="relative z-0 p-8 text-white flex flex-col">
+                    <p
+                      class="text-xs sm:text-base text-white flex items-center"
+                    >
+                      06.03.2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-3xl p-8 flex flex-col space-y-12 justify-between leading-normal"
+                >
+                  <div class="flex flex-col space-y-4">
+                    <p
+                      class="text-xs sm:text-base text-[#ADB5BD] flex items-center"
+                    >
+                      06.03.2023
+                    </p>
+                    <p class="text-sm sm:text-lg">
+                      Задача организации, в особенности же экономическая
+                      повестка сегодняшнего дня, а также свежий взгляд на
+                      привычные вещи — безусловно открывает новые горизонты для
+                      новых предложений. Также как высокое качество позиционных
+                      исследований предполагает независимые способы реализации
+                      стандартных подходов.
+                    </p>
+                  </div>
+                  <div class="flex items-center">
+                    <img
+                      class="w-10 h-10 rounded-full mr-4"
+                      src="/assets/user2.png"
+                      alt="Avatar of Writer"
+                    />
+                    <div class="text-sm">
+                      <p class="font-medium sm:text-lg leading-none">
+                        Макарова Ульяна
+                      </p>
+                      <a href="https://vk.com/" class="text-gray-600 underline"
+                        >ВКонтакте</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-start sm:flex-row sm:items-center justify-between p-6 border border-gray-300 rounded-lg bg-white space-x-4 w-full"
+      >
+        <span class="text-lg sm:text-2xl font-medium"
+          >Связаться с нами сейчас</span
+        >
+        <div class="flex items-center space-x-4">
+          <a href="https://wa.me/1234567890" class="flex items-center h-[30px] w-[30px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="41"
+              viewBox="0 0 40 41"
+              fill="none"
+            >
+              <path
+                d="M0 40.0771L2.87223 29.4156C0.555848 25.2624 -0.180089 20.416 0.799462 15.7656C1.77901 11.1153 4.40835 6.97296 8.20497 4.09879C12.0016 1.22462 16.7109 -0.18861 21.4686 0.118438C26.2263 0.425485 30.7134 2.43221 34.1064 5.77037C37.4994 9.10854 39.5707 13.5542 39.9403 18.2916C40.31 23.0291 38.953 27.7404 36.1186 31.5612C33.2841 35.382 29.1623 38.0559 24.5093 39.0923C19.8564 40.1287 14.9846 39.458 10.7878 37.2033L0 40.0771ZM11.308 33.2137L11.9752 33.6081C15.015 35.4038 18.5654 36.1469 22.0732 35.7216C25.5811 35.2963 28.8492 33.7264 31.3683 31.2567C33.8875 28.7869 35.5161 25.556 36.0005 22.0674C36.4848 18.5787 35.7977 15.0284 34.0461 11.9697C32.2945 8.91095 29.577 6.51558 26.3168 5.15688C23.0567 3.79819 19.4372 3.55247 16.0223 4.45804C12.6075 5.36361 9.58907 7.36959 7.43753 10.1634C5.28599 12.9572 4.12217 16.3818 4.12741 19.9036C4.12455 22.8238 4.93487 25.6875 6.46816 28.1759L6.88656 28.8634L5.28083 34.814L11.308 33.2137Z"
+                fill="#00D95F"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M27.5002 22.6413C27.1091 22.3269 26.6512 22.1056 26.1613 21.9943C25.6714 21.8829 25.1624 21.8845 24.6732 21.9989C23.9382 22.3032 23.4633 23.4527 22.9884 24.0275C22.8882 24.1653 22.741 24.2619 22.5745 24.2993C22.4079 24.3366 22.2334 24.3121 22.0837 24.2304C19.3928 23.1799 17.1372 21.2537 15.6834 18.7644C15.5594 18.609 15.5007 18.4118 15.5197 18.2142C15.5387 18.0166 15.6338 17.834 15.7852 17.705C16.3149 17.1823 16.7038 16.535 16.916 15.8229C16.9631 15.0374 16.7825 14.2549 16.3958 13.5688C16.0968 12.607 15.5279 11.7506 14.7561 11.1007C14.3581 10.9223 13.9168 10.8624 13.4854 10.9284C13.054 10.9944 12.651 11.1834 12.3249 11.4726C11.7589 11.9593 11.3097 12.5663 11.0103 13.249C10.7108 13.9316 10.5689 14.6726 10.5948 15.4171C10.5966 15.8353 10.6497 16.2516 10.7531 16.6569C11.0157 17.6305 11.4195 18.5607 11.9518 19.418C12.3358 20.0748 12.7548 20.7106 13.207 21.3227C14.6765 23.3332 16.5237 25.0403 18.6461 26.3492C19.7111 27.0143 20.8494 27.555 22.0385 27.9608C23.2737 28.5188 24.6375 28.733 25.985 28.5806C26.7527 28.4648 27.4802 28.1627 28.1033 27.7009C28.7264 27.239 29.226 26.6316 29.5583 25.9322C29.7535 25.5096 29.8128 25.0372 29.7279 24.5797C29.5244 23.6443 28.2692 23.0921 27.5002 22.6413Z"
+                fill="#00D95F"
+              />
+            </svg>
+          </a>
+          <a
+            href="tg://resolve?domain=yourtelegramusername"
+            class="h-[30px] w-[30px] flex items-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="41"
+              viewBox="0 0 40 41"
+              fill="none"
+            >
+              <path
+                d="M20 40.0771C31.0457 40.0771 40 31.1228 40 20.0771C40 9.03147 31.0457 0.0771484 20 0.0771484C8.95432 0.0771484 0 9.03147 0 20.0771C0 31.1228 8.95432 40.0771 20 40.0771Z"
+                fill="#34AADF"
+              />
+              <path
+                d="M8.5735 19.6395C8.5735 19.6395 18.4805 15.4247 21.9164 13.9406C23.2335 13.347 27.7002 11.4473 27.7002 11.4473C27.7002 11.4473 29.7618 10.6163 29.59 12.6346C29.5327 13.4657 29.0746 16.3745 28.6165 19.5208C27.9293 23.973 27.1848 28.8408 27.1848 28.8408C27.1848 28.8408 27.0703 30.2062 26.0968 30.4436C25.1233 30.6811 23.5198 29.6126 23.2335 29.3751C23.0044 29.197 18.9386 26.5256 17.4497 25.2196C17.0488 24.8635 16.5907 24.1512 17.5069 23.32C19.5685 21.361 22.0309 18.9272 23.5198 17.3837C24.207 16.6713 24.8942 15.0092 22.0309 17.0275C17.9651 19.9363 13.9565 22.667 13.9565 22.667C13.9565 22.667 13.0402 23.2606 11.3223 22.7264C9.60422 22.1922 7.59992 21.4798 7.59992 21.4798C7.59992 21.4798 6.22562 20.5893 8.5735 19.6395Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/scripts/scripts.js"></script>
+    <script src="/scripts/swiper.js"></script>
+  </body>
+</html>
