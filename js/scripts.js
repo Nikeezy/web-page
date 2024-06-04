@@ -67,7 +67,7 @@ function displayReview(review) {
         </div>
         <div class="flex items-center">
           <img class="w-10 h-10 rounded-full mr-4" src="${
-            review.photo || "./img/default-user.png"
+            review.photo || "img/default-user.png"
           }" alt="Avatar of ${review.fullname}" />
           <div class="text-sm">
             <p class="font-medium sm:text-lg leading-none">
