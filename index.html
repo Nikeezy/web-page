@@ -14,12 +14,12 @@
     />
     <link rel="stylesheet" href="./css/output.css" />
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-gray-100 font-onest">
     <div
-      class="max-w-[1160px] mx-auto flex flex-col justify-center items-center h-screen p-4 space-y-4"
+      class="max-w-[1160px] mx-auto flex flex-col justify-center h-[800px] items-center p-4 space-y-20"
     >
       <div
-        class="flex flex-col justify-center items-center space-y-8 mx-2 md:mx-4 lg:mx-8 w-full h-full"
+        class="flex flex-col justify-center items-center space-y-10 mx-2 md:mx-4 lg:mx-8 w-full h-full"
       >
         <div class="flex flex-col space-y-8 w-full">
           <div class="flex items-center justify-between w-full">
@@ -28,7 +28,7 @@
             >
               Клиенты о нас
             </div>
-            <div class="flex items-center space-x-2 md:space-x-4">
+            <div class="flex items-center space-x-4">
               <div>
                 <button
                   data-modal-target="crud-modal"
@@ -159,7 +159,7 @@
                 </div>
               </div>
 
-              <div class="flex items-center space-x-2 md:space-x-4">
+              <div class="flex items-center space-x-2.5">
                 <div
                   class="swiper-button-prev max-w-4 max-h-3 p-4 sm:max-h-full sm:max-w-full border-solid border-2 border-black rounded-full sm:p-5"
                 ></div>
@@ -186,7 +186,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div
-                  class="bg-white rounded-3xl p-8 flex flex-col space-y-12 justify-between leading-normal"
+                  class="bg-white rounded-3xl p-10 flex flex-col space-y-10 sm:space-y-5 justify-between leading-normal slide-content"
                 >
                   <div class="flex flex-col space-y-4">
                     <p
@@ -194,7 +194,7 @@
                     >
                       06.03.2023
                     </p>
-                    <p class="text-sm sm:text-lg">
+                    <p class="text-sm sm:text-lg leading-5">
                       Внезапно, представители современных социальных резервов
                       лишь добавляют фракционных разногласий и подвергнуты целой
                       серии независимых исследований. Но социально-экономическое
@@ -221,16 +221,16 @@
               </div>
               <div class="swiper-slide">
                 <div
-                  class="relative w-full h-[500px] shadow-lg overflow-hidden"
+                  class="relative w-full h-[500px] overflow-hidden slide-content"
                 >
                   <video
-                    class="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-3xl"
+                    class="absolute top-0 left-0 w-full h-[500px] object-cover z-0 rounded-3xl"
                     controls
                   >
                     <source src="./videos/video.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
-                  <div class="relative z-0 p-8 text-white flex flex-col">
+                  <div class="relative z-0 p-10 text-white flex flex-col">
                     <p
                       class="text-xs sm:text-base text-white flex items-center"
                     >
@@ -241,7 +241,7 @@
               </div>
               <div class="swiper-slide">
                 <div
-                  class="bg-white rounded-3xl p-8 flex flex-col space-y-12 justify-between leading-normal"
+                  class="bg-white rounded-3xl p-10 flex flex-col space-y-10 sm:space-y-5 justify-between leading-normal slide-content"
                 >
                   <div class="flex flex-col space-y-4">
                     <p
@@ -249,13 +249,12 @@
                     >
                       06.03.2023
                     </p>
-                    <p class="text-sm sm:text-lg">
-                      Задача организации, в особенности же экономическая
-                      повестка сегодняшнего дня, а также свежий взгляд на
-                      привычные вещи — безусловно открывает новые горизонты для
-                      новых предложений. Также как высокое качество позиционных
-                      исследований предполагает независимые способы реализации
-                      стандартных подходов.
+                    <p class="text-sm sm:text-lg leading-5">
+                      Внезапно, представители современных социальных резервов
+                      лишь добавляют фракционных разногласий и подвергнуты целой
+                      серии независимых исследований. Но социально-экономическое
+                      развитие предоставляет широкие возможности для
+                      соответствующих условий активизации.
                     </p>
                   </div>
                   <div class="flex items-center">
@@ -280,13 +279,16 @@
         </div>
       </div>
       <div
-        class="flex flex-col items-start sm:flex-row sm:items-center justify-between p-6 border border-gray-300 rounded-lg bg-white space-x-4 w-full"
+        class="flex flex-col items-start sm:flex-row sm:items-center justify-between p-6 border border-gray-300 rounded-lg bg-white space-x-4 w-full space-y-2.5"
       >
-        <span class="text-lg sm:text-2xl font-medium"
+        <span class="text-lg sm:text-2xl font-medium leading-4"
           >Связаться с нами сейчас</span
         >
         <div class="flex items-center space-x-4">
-          <a href="https://wa.me/1234567890" class="flex items-center h-[30px] w-[30px]">
+          <a
+            href="https://wa.me/1234567890"
+            class="flex items-center h-[30px] w-[30px]"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="40"

@@ -1,6 +1,6 @@
 const swiper = new Swiper(".swiper-container", {
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 40,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -10,13 +10,11 @@ const swiper = new Swiper(".swiper-container", {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      640: {
+      768: {
         slidesPerView: 2,
-        spaceBetween: 10,
       },
       1024: {
         slidesPerView: 3,
-        spaceBetween: 10,
       },
     },
     observer: true

@@ -56,12 +56,12 @@ function displayReview(review) {
   const reviewElement = document.createElement("div");
   reviewElement.classList.add("swiper-slide");
   reviewElement.innerHTML = `
-      <div class="bg-white rounded-3xl p-8 flex flex-col space-y-12 justify-between leading-normal">
+      <div class="bg-white rounded-3xl p-10 flex flex-col space-y-10 sm:space-y-5 justify-between leading-normal slide-content">
         <div class="flex flex-col space-y-4">
           <p class="text-xs sm:text-base text-[#ADB5BD] flex items-center">
             ${review.date}
           </p>
-          <p class="text-sm sm:text-lg">
+          <p class="text-xs sm:text-base text-[#ADB5BD] flex items-center">
             ${review.description}
           </p>
         </div>
